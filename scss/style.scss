@@ -1,0 +1,161 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*------------------------------------------*/
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #eafdff;
+
+}
+
+.container{
+  max-width: 1600px;
+  height: 100%;
+  background: #eafdff;
+  margin: 0 auto;
+}
+.comments{
+  width: 1000px;
+  font-family: monospace;
+  font-size: 25px;
+  margin: 0 auto;
+}
+.days{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.day {
+  padding: 20px 30px;
+  height: 33%;
+}
+
+.day_title {
+  font-family: monospace;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.list_block {
+  margin-top: 10px;
+  background: #ffffff;
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+.list {
+}
+.class{
+  width: 100%;
+  font-family: monospace;
+  font-size: 16px;
+  list-style: decimal;
+  list-style-position:inside;
+  padding: 10px 20px;
+  border: 1px solid #888888;
+
+  span{margin-left: 3px;}
+
+  &:first-child{
+    border-radius: 20px 20px 0px 0px;
+  }
+  &:last-child{
+    border-radius: 0px 0px 20px 20px;
+  }
+}
+.classroom{
+  float: right;
+  margin-right: 20px;
+}
+
+.now-class{
+  background: #ffc98f;
+}
