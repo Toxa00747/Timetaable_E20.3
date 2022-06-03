@@ -1,8 +1,8 @@
 "use strict";
 
-let dayWeek = new Date('June 03, 2022 12:30:00').getDay()
-let hour =    new Date('June 03, 2022 12:30:00').getHours();
-let min =     new Date('June 03, 2022 12:30:00').getMinutes();
+let dayWeek = new Date().getDay()
+let hour =    new Date().getHours();
+let min =     new Date().getMinutes();
 console.log(`${hour}:${min}`)
 
 let day = document.querySelector(`.day-${dayWeek}>.list_block>.list`)
